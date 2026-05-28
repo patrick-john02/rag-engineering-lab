@@ -2719,6 +2719,7 @@ dependencies = [
     { name = "fastapi" },
     { name = "google-genai" },
     { name = "langgraph" },
+    { name = "logfire" },
     { name = "pydantic-ai" },
 ]
 
@@ -2727,6 +2728,7 @@ requires-dist = [
     { name = "fastapi", specifier = ">=0.136.3" },
     { name = "google-genai", specifier = ">=2.6.0" },
     { name = "langgraph", specifier = ">=1.2.2" },
+    { name = "logfire", specifier = ">=4.34.0" },
     { name = "pydantic-ai", specifier = ">=1.103.0" },
 ]
 

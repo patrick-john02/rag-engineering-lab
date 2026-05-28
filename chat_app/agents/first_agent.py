@@ -37,10 +37,20 @@ first_agent = Agent(
 async def search_records(
     ctx: RunContext[None],
     query: str = "",
-    category: str = 'all',
     time_preset: Optional[str] = None,
     status: Optional[str] = None
 )->str:
     
-    valid = ['all', 'users', 'posts', 'todos', 'comments']
+    data = await search_records(
+        query=query,
+        limit=10,
+        time_preset=time_preset,
+        status=status
+    )
+    
+    if "error" in data:
+        return data["error"]
+    
+    results = data.get("results", {})
+    
     
