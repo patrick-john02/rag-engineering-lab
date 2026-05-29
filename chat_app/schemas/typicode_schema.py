@@ -1,0 +1,44 @@
+from pydantic import BaseModel
+
+
+#typicode api's
+class Geo(BaseModel):
+    lat: float
+    lng: float
+
+class Address(BaseModel):
+    street: str
+    suite: str
+    city: str
+    zipcode: str
+    geo: Geo
+    
+class Company(BaseModel):
+    name: str
+    catchPhrase: str
+    bs: str
+
+class User(BaseModel):
+    id: int
+    name: str
+    username: str
+    email: str
+    address: Address
+    phone: str
+    website: str
+    company: Company
+    
+#TODOS
+class Todos(BaseModel):
+    userId: int
+    id: int
+    title: str
+    completed: bool
+    
+    
+#POST
+class Post(BaseModel):
+    userId: int
+    id: int
+    title: str
+    body: str
